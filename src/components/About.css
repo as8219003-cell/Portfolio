@@ -1,0 +1,87 @@
+.about-section {
+    background: #1f1f1f;
+    padding: 60px 0;
+    /* 🔥 Reduced from 100px */
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    background: #2a2a2a;
+    width: 85%;
+    padding: 50px;
+    /* Slightly reduced */
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 40px;
+    /* Reduced */
+}
+
+.about-title h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.about-title span {
+    color: #ff4a17;
+}
+
+.about-title p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    /* Slightly reduced */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 320px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff4a17;
+}
+
+.about-text {
+    max-width: 500px;
+    color: #ccc;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.about-text span {
+    color: #ff4a17;
+}
+
+.about-info p {
+    margin: 6px 0;
+    /* Reduced spacing */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 250px;
+    }
+}

@@ -1,0 +1,120 @@
+.contact-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.contact-left {
+    flex: 1;
+    color: white;
+}
+
+.contact-left h2 {
+    font-size: 40px;
+}
+
+.contact-left span {
+    color: #ff4a17;
+}
+
+.contact-left p {
+    margin: 20px 0;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.contact-social a {
+    font-size: 22px;
+    margin-right: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.contact-social a:hover {
+    color: #ff4a17;
+    transform: translateY(-3px);
+}
+
+/* RIGHT SIDE FORM */
+.contact-right {
+    flex: 1;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Floating Inputs */
+.floating-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.floating-group input,
+.floating-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #444;
+    color: white;
+    outline: none;
+    border-radius: 6px;
+}
+
+.floating-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #aaa;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.floating-group input:focus+label,
+.floating-group input:valid+label,
+.floating-group textarea:focus+label,
+.floating-group textarea:valid+label {
+    top: -10px;
+    font-size: 12px;
+    color: #ff4a17;
+    background: #1a1a1a;
+    padding: 0 5px;
+}
+
+/* Button */
+.send-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff4a17;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    box-shadow: 0 0 15px #ff4a17;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

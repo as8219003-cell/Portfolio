@@ -1,0 +1,131 @@
+.footer {
+    background: linear-gradient(135deg, #0d0d0d, #111);
+    padding: 80px 10% 30px 10%;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Glow Background */
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 74, 23, 0.15), transparent 70%);
+    top: -100px;
+    right: -100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+}
+
+.footer-brand span {
+    color: #ff4a17;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    color: #aaa;
+    max-width: 280px;
+    line-height: 1.6;
+}
+
+/* Links */
+.footer-links h4,
+.footer-tech h4,
+.footer-social h4 {
+    margin-bottom: 15px;
+    color: #ff4a17;
+}
+
+.footer-links a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff4a17;
+}
+
+/* Tech Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tags span {
+    background: rgba(255, 74, 23, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.tech-tags span:hover {
+    background: #ff4a17;
+}
+
+/* Social Icons */
+.social-icons a {
+    font-size: 20px;
+    margin-right: 12px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4a17;
+    transform: translateY(-3px);
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Scroll Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff4a17;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(255, 74, 23, 0.6);
+    transition: 0.3s;
+}
+
+.scroll-top:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}

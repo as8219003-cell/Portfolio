@@ -1,0 +1,163 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.active {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-left img {
+    height: 40px;
+}
+
+/* Desktop Menu */
+.nav-center {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    position: relative;
+}
+
+.nav-center li {
+    position: relative;
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Smooth Active Highlight */
+.nav-center li a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ff4a17;
+    transition: 0.3s;
+}
+
+.nav-center li a:hover {
+    color: #ff4a17;
+}
+
+.nav-center li a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #1a1a1a;
+    padding: 10px 0;
+    display: none;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mega Menu */
+.mega-menu {
+    position: absolute;
+    top: 35px;
+    left: -50px;
+    background: #1a1a1a;
+    padding: 20px;
+    display: none;
+    grid-template-columns: repeat(2, 150px);
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.mega:hover .mega-menu {
+    display: grid;
+}
+
+.mega-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.mega-menu a:hover {
+    color: #ff4a17;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
+@media (max-width: 1000px) {
+    .nav-center {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        background: #111;
+        flex-direction: column;
+        width: 250px;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .nav-center.open {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .dropdown-menu,
+    .mega-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}

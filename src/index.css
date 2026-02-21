@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    scroll-snap-align: start;
+}

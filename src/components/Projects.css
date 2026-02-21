@@ -1,0 +1,111 @@
+.projects-section {
+    background: #111;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.projects-title h2 {
+    font-size: 36px;
+}
+
+.projects-title span {
+    color: #ff4a17;
+}
+
+.projects-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.tech span {
+    background: #ff4a17;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button,
+.buttons a {
+    margin: 5px;
+    padding: 8px 18px;
+    border: 2px solid #ff4a17;
+    border-radius: 30px;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.buttons button:hover,
+.buttons a:hover {
+    background: #ff4a17;
+    box-shadow: 0 0 15px #ff4a17;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    color: #ff4a17;
+    font-weight: bold;
+}

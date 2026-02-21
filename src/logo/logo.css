@@ -1,0 +1,6 @@
+.logo img {
+    height: 35px;
+    /* chhota logo */
+    width: auto;
+    object-fit: contain;
+}
