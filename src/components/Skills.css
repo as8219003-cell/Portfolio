@@ -1,0 +1,95 @@
+.skills-section {
+    background: #121212;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.skills-title h2 {
+    font-size: 36px;
+}
+
+.skills-title span {
+    color: #ff4a17;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 50px 0;
+}
+
+.stats h3 {
+    font-size: 30px;
+    color: #ff4a17;
+}
+
+/* Skill Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 85%;
+    margin: auto;
+}
+
+.skill-card {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #ff4a17;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #ff4a17;
+}
+
+/* Progress Bars */
+.progress {
+    width: 100%;
+    background: #333;
+    height: 8px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 20px;
+    animation: load 2s ease forwards;
+}
+
+.react {
+    width: 85%;
+    background: #61dafb;
+}
+
+.node {
+    width: 80%;
+    background: #3c873a;
+}
+
+.mongo {
+    width: 75%;
+    background: #4db33d;
+}
+
+.js {
+    width: 90%;
+    background: #f0db4f;
+}
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+}
